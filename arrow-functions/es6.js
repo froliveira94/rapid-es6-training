@@ -3,6 +3,7 @@
 var getPrice = () => 5.99;
 console.log(typeof getPrice); //function
 console.log(getPrice()); //5.99
+console.log(getPrice.hasOwnProperty("prototype"));
 
 var getPrice_a = count => count * 4.00;
 console.log(getPrice_a(2)); //8.00
@@ -19,7 +20,7 @@ console.log(getPrice_c(2, .07)); //8.56
 
 document.addEventListener('click', () => console.log(this)); //Window {...}
 
-var invoice = {
+var invoice = { 
     number: 123,
     process: function() {
         return () => console.log(this.number);
@@ -31,3 +32,4 @@ var newInvoice = {
     number: 456
 };
 invoice.process().bind(newInvoice)(); //123
+invoice.process().call(newInvoice); //123
