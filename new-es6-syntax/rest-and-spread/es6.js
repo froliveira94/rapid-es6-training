@@ -38,7 +38,7 @@ var maxCode = Math.max(..."43210");
 console.log(maxCode); //4
 
 var codeArray = ["A", ..."BCD", "E"];
-console.log(codeArray);
+console.log(codeArray); //['A', 'B', 'C', 'D', 'E']
 
    
 
